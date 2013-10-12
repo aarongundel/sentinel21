@@ -1,0 +1,157 @@
+html{
+    background-color: #F5F5FF;
+    /*background-image: url(/images/background.jpg    
+    background-size:cover;
+    /* default background-position 
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat:no-repeat;*/
+}
+
+html, body{
+    width: 100%;
+    height:100%;
+}
+
+body {
+  font: 1.5em "Source Sans Pro", Helvetica, Arial, sans-serif;
+  background-color: transparent;
+  color: #555;
+}
+
+a {
+  color: #F4AD83;
+}
+
+#app{
+  position: relative;
+  width: 100%;
+}
+#app .content{
+  max-width: 50em;
+  margin: 0em auto;
+}
+#app .images{
+  background-color: #F4DC83;
+  height: 10em;
+}
+footer{
+  border-top: 5px solid #F4DC83;
+  color: #F4AD83;
+  background-color: #5C7AA0;
+
+}
+header h1{
+  margin: 0em;
+  width: 5em;
+}
+header nav{
+  position: relative;
+  top: 0.65em;
+}
+#app .column{
+  width: 50em;
+  position: relative;
+  margin: 0em auto;
+}
+#app .column img{
+  margin: 10px 0px;
+}
+
+nav li {
+    display:inline-block;
+    margin-right: 1em
+}
+header h1{
+  color: #5C7AA0;
+}
+footer h6{
+  font-style: italic;
+  font-weight: normal;
+}
+footer {
+  height:3em;
+}
+
+h1, h2, h3, nav a{
+    font-family: "Passion One", serif;
+}
+nav a {
+  color: #F4AD83;
+}
+
+.row.heading {
+  height: 4em;
+}
+.bg-nav{
+  width: 100%;
+  background-color: #5C7AA0;
+  height: 3em;
+}
+nav ul{
+  margin-bottom: 0px;
+  font-size: 1.25em;
+  padding-left:0em;
+}
+header .me{
+  position: absolute;
+  z-index: 10;
+  top: 1em;
+  border: 3px solid #fff;
+  right: 0em;
+  -webkit-transform: rotate(10deg) ;
+  -moz-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+
+.images img{
+  border: 3px solid #fff;
+}
+
+.images .ocean {
+  position:absolute;
+  z-index: 1;
+  -webkit-transform: rotate(10deg) ;
+  -moz-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+
+.images .switchback {
+  position:absolute;
+  left: 26%;
+  z-index:2;
+  margin-left: -1em;
+  -webkit-transform: rotate(-5deg) ;
+  -moz-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+
+.images .mountain {
+  position:absolute;
+  z-index: 1;
+  left: 64%;
+  margin-left: -1em;
+  -webkit-transform: rotate(15deg) ;
+  -moz-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+
+.images .running {
+  position:absolute;
+  z-index: 1;
+  left: 53%;
+  margin-left: -1em;
+  -webkit-transform: rotate(-15deg) ;
+  -moz-transform: rotate(-15deg);
+  -o-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
