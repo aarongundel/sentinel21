@@ -46,7 +46,7 @@ function program3(depth0,data) {
   hashContexts = {};
   options = {hash:{},contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   data.buffer.push(escapeExpression(((stack1 = helpers.outlet || depth0.outlet),stack1 ? stack1.call(depth0, "loading", options) : helperMissing.call(depth0, "outlet", "loading", options))));
-  data.buffer.push("\n</div>\n\n<footer>\n    <div class=\"column\"><h6>&copy;2013 Aaron Gundel.  All Rights Reserved.  All views and commentary expressed on this site\n        are solely those of Aaron Gundel and do not reflect those of any past, present, or future employers, friends, or enemies.</h6></div>\n</footer>");
+  data.buffer.push("\n</div>\n\n<footer>\n    <div class=\"column\"><h6>&copy;2013 Aaron Gundel.  All Rights Reserved.  All views and commentary expressed on this site\n        are solely those of Aaron Gundel and do not reflect those of any past, present, or future employers, friends, or enemies.</h6></div>\n</footer>\n<script type=\"text/javascript\">\n\n  var _gaq = _gaq || [];\n  _gaq.push(['_setAccount', 'UA-39157912-1']);\n  _gaq.push(['_trackPageview']);\n\n  (function() {\n    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n  })();\n\n</script>");
   return buffer;
   
 });

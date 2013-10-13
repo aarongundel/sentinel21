@@ -12,7 +12,7 @@
                     reload: true,
                     config: function(){
                         this.page.identifier = disqus_identifier;
-                        this.page.url = "http://" + window.hostname + "/posts/" + disqus_identifier;
+                        this.page.url = "http://" + window.location.hostname + "/posts/" + disqus_identifier;
                     }
                 });
             } else {
