@@ -1,6 +1,6 @@
 {
   "name": "Sentinel21",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -8,7 +8,6 @@
   "dependencies": {
     "express": "3.3.5",
     "jade": "*",
-    "request": "~2.27.0",
     "tumblr": "~0.2.1"
   },
   "devDependencies": {
