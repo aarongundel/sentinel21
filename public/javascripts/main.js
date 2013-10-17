@@ -24,6 +24,15 @@ App.PostsRoute = Ember.Route.extend({
     }
 });
 
+App.LoadingRoute = Ember.Route.extend({
+    renderTemplate: function(){
+        this.render('loading', {
+            outlet: "loading",
+            into: "application"
+        });
+    }
+});
+
 App.PostRoute = Ember.Route.extend({
     model: function(params){
         return Ember.$.getJSON('/api/posts/' + params.post_id);
@@ -33,5 +42,3 @@ App.PostRoute = Ember.Route.extend({
 App.PostsIndexController = Ember.ArrayController.extend({
 
 });
-
-App.LoadingRoute = Ember.Route.extend({});
