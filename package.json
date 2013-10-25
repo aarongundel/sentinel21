@@ -23,6 +23,9 @@
     "sentinel21.com",
     "www.sentinel21.com"
   ],
+  "scripts":{
+    "test": "mocha"
+  },
   "engines": {
     "node": "0.8.x"
   }
