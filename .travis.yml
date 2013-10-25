@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '0.11'
+- '0.10'
+env:
+  global:
+    secure: 
+deploy:
+  provider: nodejitsu
+  user: aaron.gundel
+  api_key:
+    secure: J1nOLwV3laPmVipKtv8VhVamps6dja4BUCimxigmTw+p8jPy5UVbsNVRo37sbDLtb/Z+mr5LPwSRLOoo3QsxLsEvH3FHGDKkVL7QvVbQ6Ok7VkQkNDjWgHDCk301SgdzMdULioFNpXsBj3y4EcTUIVnzZxPcerEWNjrEcDHR8w4=
+  on: deploy
