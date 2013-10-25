@@ -9,6 +9,17 @@ App.Router.map(function(){
     this.resource("post", {path: "/post/:post_id"})
 });
 
+App.Post = DS.Model.extend({
+    "blog_name": DS.attr('string'),
+    "body": DS.attr('string'),
+    "date": DS.attr('date'),
+    "format": DS.attr("string"),
+    "title": DS.attr("string")
+});
+App.ApplicationAdapter = DS.RESTAdapter.extend({
+    namespace: 'api'
+})
+
 App.IndexRoute = Ember.Route.extend({
     redirect: function(){
         this.transitionTo('about');
@@ -17,7 +28,9 @@ App.IndexRoute = Ember.Route.extend({
 
 App.PostsRoute = Ember.Route.extend({
     model: function(){
-        return Ember.$.getJSON('/api/posts/list');
+        var store = this.get('store');
+        return store.find('post');
+        //return Ember.$.getJSON('/api/posts/list');
     },
     setupController: function(controller, posts) {
         controller.set('content', posts);

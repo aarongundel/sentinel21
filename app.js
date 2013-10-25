@@ -29,7 +29,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/api/posts/list', api.posts.list);
+app.get('/api/posts', api.posts.list);
 app.get('/api/posts/:id', api.posts.show);
 app.get('/users', user.list);
 

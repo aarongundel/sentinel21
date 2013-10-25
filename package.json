@@ -1,6 +1,6 @@
 {
   "name": "Sentinel21",
-  "version": "0.0.2",
+  "version": "0.0.2-1",
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -14,7 +14,9 @@
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-ember-templates": "~0.4.15",
-    "grunt-contrib-uglify": "~0.2.4"
+    "grunt-contrib-uglify": "~0.2.4",
+    "supertest": "~0.8.0",
+    "should": "~2.0.2"
   },
   "subdomain": "sentinel",
   "domains": [

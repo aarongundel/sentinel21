@@ -37,10 +37,10 @@ function program3(depth0,data) {
   options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "posts", options) : helperMissing.call(depth0, "link-to", "posts", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
-  data.buffer.push("</li>\n                </ul>\n            </nav>\n        </div>\n    </div>\n</header>\n<div class=\"images\">\n    <div class=\"column\">\n        <img class=\"ocean\" src=\"/images/ocean.jpg\">\n        <img class=\"switchback\" src=\"/images/switchback.jpg\">\n        <img class=\"mountain\" src=\"/images/mountain.jpg\">\n        <img class=\"running\" src=\"/images/running.jpg\">\n    </div>\n</div>\n<div class=\"content\">\n    <div class=\"column row\"></div>\n ");
+  data.buffer.push("</li>\n                </ul>\n            </nav>\n        </div>\n    </div>\n</header>\n<div class=\"images\">\n    <div class=\"column\">\n        <img class=\"ocean\" src=\"/images/ocean.jpg\">\n        <img class=\"switchback\" src=\"/images/switchback.jpg\">\n        <img class=\"mountain\" src=\"/images/mountain.jpg\">\n        <img class=\"running\" src=\"/images/running.jpg\">\n    </div>\n</div>\n<div class=\"content\">\n    <div class=\"column row\"></div>\n  ");
   hashTypes = {};
   hashContexts = {};
-  options = {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
+  options = {hash:{},contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   data.buffer.push(escapeExpression(((stack1 = helpers.outlet || depth0.outlet),stack1 ? stack1.call(depth0, "loading", options) : helperMissing.call(depth0, "outlet", "loading", options))));
   data.buffer.push("\n  ");
   hashTypes = {};

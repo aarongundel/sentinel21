@@ -5,13 +5,13 @@ module.exports = function(req, response, abc){
     blog.text({id: req.params.id}, function(error, data){
         if(error){
             console.log(error);
+            response.status('404').send('Not Found');
         } else {
             if(data.posts.length){
-                response.send(data.posts[0]);
+                response.send({'post': data.posts[0]});
             } else {
                 response.send({})
             }
-            response.send(data.posts);
         }
     });
 };

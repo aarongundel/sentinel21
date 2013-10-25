@@ -8,7 +8,7 @@ module.exports = function(req, response, abc){
             console.log(error);
             response.send({"error": error})
         } else {
-            response.send(data.posts);
+            response.send({"posts": data.posts});
         }
     });
 };
