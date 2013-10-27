@@ -4,6 +4,7 @@ node_js:
 - '0.10'
 before_install:
 - npm install
+- sudo npm install -g mocha
 - node app.js&
 deploy:
   provider: nodejitsu
