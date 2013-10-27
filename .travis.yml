@@ -1,13 +1,16 @@
 language: node_js
 node_js:
-  - '0.11'
-  - '0.10'
+- '0.11'
+- '0.10'
 before_install:
-  - "npm install --dev"
-  - "node app.js&"
+- npm install
+- node app.js&
 deploy:
   provider: nodejitsu
   user: aaron.gundel
   api_key:
     secure: J1nOLwV3laPmVipKtv8VhVamps6dja4BUCimxigmTw+p8jPy5UVbsNVRo37sbDLtb/Z+mr5LPwSRLOoo3QsxLsEvH3FHGDKkVL7QvVbQ6Ok7VkQkNDjWgHDCk301SgdzMdULioFNpXsBj3y4EcTUIVnzZxPcerEWNjrEcDHR8w4=
   on: deploy
+env:
+  global:
+    secure: qD1zNA+Px0FBc9wFz69dQcDrDLGEAM0kzubu2WW2jul8MQC+xqYz/BOq3V/Xmhoa/gK+u1jmE/ZCTCJSXOloAYkYLqJ1NHgwoAifUuZSBHI4UNfIrImcNetgIKrlU9hPupq5uGzfqjIrZesNXtqIzi9b4Kd92pHipmiC3o8IuW0=
