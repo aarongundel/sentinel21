@@ -16,7 +16,8 @@
     "grunt-ember-templates": "~0.4.15",
     "grunt-contrib-uglify": "~0.2.4",
     "supertest": "~0.8.0",
-    "should": "~2.0.2"
+    "should": "~2.0.2",
+    "mocha": "*"
   },
   "subdomain": "sentinel",
   "domains": [
