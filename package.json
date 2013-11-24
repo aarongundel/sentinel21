@@ -1,8 +1,9 @@
 {
   "name": "Sentinel21",
-  "version": "0.0.2-1",
+  "version": "0.0.2-3",
   "private": true,
   "scripts": {
+    "test": "mocha",
     "start": "node app.js"
   },
   "dependencies": {
@@ -24,9 +25,6 @@
     "sentinel21.com",
     "www.sentinel21.com"
   ],
-  "scripts":{
-    "test": "mocha"
-  },
   "engines": {
     "node": "0.8.x"
   }

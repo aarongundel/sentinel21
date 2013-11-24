@@ -22,6 +22,12 @@ function program1(depth0,data) {
 function program3(depth0,data) {
   
   
+  data.buffer.push("Resume");
+  }
+
+function program5(depth0,data) {
+  
+  
   data.buffer.push("Posts");
   }
 
@@ -35,6 +41,12 @@ function program3(depth0,data) {
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
+  stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "resume", options) : helperMissing.call(depth0, "link-to", "resume", options));
+  if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
+  data.buffer.push("</li>\n                    <li>");
+  hashTypes = {};
+  hashContexts = {};
+  options = {hash:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "posts", options) : helperMissing.call(depth0, "link-to", "posts", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("</li>\n                </ul>\n            </nav>\n        </div>\n    </div>\n</header>\n<div class=\"images\">\n    <div class=\"column\">\n        <img class=\"ocean\" src=\"/images/ocean.jpg\">\n        <img class=\"switchback\" src=\"/images/switchback.jpg\">\n        <img class=\"mountain\" src=\"/images/mountain.jpg\">\n        <img class=\"running\" src=\"/images/running.jpg\">\n    </div>\n</div>\n<div class=\"content\">\n    <div class=\"column row\"></div>\n  ");
@@ -146,6 +158,6 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 
 
-  data.buffer.push("<!--\n<div class=\"row heading\">\n    <div class=\"col-md-4\"><h3>Aaron Gundel</h3></div>\n</div>-->");
+  data.buffer.push("<div id=\"resume\">\n	<h3>Aaron Gundel</h3>\n	<h4>Work Experience</h4>\n	<ul>\n		<li>\n			<h5>\n				<div class=\"row\">\n					<div class=\"col-md-3\"><a href=\"http://www.sjwater.com\">San Jose Water</a></div><div class=\"col-md-4\">2009 - Present</div>\n				</div>\n			</h5>\n			<h6>\n				<div class=\"row\">\n					<div class=\"col-md-3\">Senior Developer</div><div class=\"col-md-3\">2012 - Present</div>\n				</div>\n				<div class=\"row\">\n					<div class=\"col-md-3\">GIS Developer</div><div class=\"col-md-3\">2009 - 2012</div>\n				</div>\n			</h6>\n			<p>\n				<em>\n					During my time at SJW, I've worked to improve the employee efficiency when \n					consuming GIS (mapping) and engineering data.  I've operated (built/maintained)\n					several application servers (including a GeoServer cluster) and built multiple\n					web applications for internal systems.  I've worked with .NET, PHP, JavaScript,\n					and several other languages on multiple platforms and operating systems.  I've\n					worked with the whole web stack, from database (MySQL, Postgres, Oracle, and SQL Server) \n					to server, to the client, and back again.  \n				</em>\n			</p>\n		</li>\n		<li>\n			<h5>\n				<div class=\"row\">\n					<div class=\"col-md-3\"><a href=\"http://www.vdr.com\">The vdR Group</a></div><div class=\"col-md-4\">2007 - 2009</div>\n				</div>\n			</h5>\n			<h6>\n				<div class=\"row\">\n					<div class=\"col-md-3\">Intern</div><div class=\"col-md-3\">February 2007 - May 2007</div>\n				</div>\n				<div class=\"row\">\n					<div class=\"col-md-3\">Consentra Developer</div><div class=\"col-md-3\">May 2007 - Jan 2008</div>\n				</div>\n				<div class=\"row\">\n					<div class=\"col-md-3\">LiveLink Developer</div><div class=\"col-md-3\">Jan 2008 - Jan 2009</div>\n				</div>\n			</h6>\n			<p>\n				<em>\n					The vdR Group graciously gave me a start in software development starting with\n					an internship in early 2007.  My worked focused on the construction and maintenance\n					of a .NET based content management system at first, but I shifted to developing\n					extensions for Opentext Livelink.  In this context, I worked on both ends of the\n					web stack to ensure a good user experience from end to end.  \n				</em>\n			</p>\n		</li>\n	</ul>\n	<h4 class=\"header-spacing\">Education</h4>\n	<ul>\n		<li>\n			<h5>\n				<div class=\"row\">\n					<div class=\"col-md-3\"><a href=\"http://www.biola.edu/\">Biola University</a></div><div class=\"col-md-3\">2004 - 2007</div>\n				</div>\n			</h5>\n			<h6>\n				<div class=\"row\">\n					<div class=\"col-md-3\">Bachelor of Science</div><div class=\"col-md-3\">Computer Science</div>\n				</div>\n			</h6>\n			<em>I graduated Magna Cum Laude from Biola University in 2007 with a Bachelor of Science in Computer\n				Science.  While at Biola, I worked several computer science related jobs at the university, including\n			    technical support, subnet administration, and teaching assistant in CS courses. </em>\n		</li>\n	</ul>\n	<h4 class=\"header-spacing\">Skillset</h4>\n	<ul>\n		<li>\n			<h5>\n				<div class=\"row\">\n					<div class=\"col-md-3\">Front End Development</div>\n				</div>\n			</h5>\n			<em>HTML5, CSS, JavaScript [jQuery, Ember.js, Backbone, Bootstrap, etc.]</em>\n		</li>\n		<li>\n			<h5>\n				<div class=\"row\">\n					<div class=\"col-md-4\">Server Side Development</div>\n				</div>\n			</h5>\n			<em>.NET [C#, ASP.NET, ASP.NET MVC, WCF], PHP [ExpressionEngine], Node.js [Express.js, Socket.io, Grunt, etc.]</em>\n		</li>\n		<li>\n			<h5>\n				<div class=\"row\">\n					<div class=\"col-md-4\">Database Wizardry</div>\n				</div>\n			</h5>\n			<em>Oracle, MySQL, PostgreSQL, SqlServer</em>\n		</li>\n		<li>\n			<h5>\n				<div class=\"row\">\n					<div class=\"col-md-4\">Miscellaneous</div>\n				</div>\n			</h5>\n			<em>Git, SVN, Linux based OSes, OSX, Windows Servers, Windows Desktop Development, and more!</em>\n		</li>\n	</ul>\n	<div>&nbsp;</div>\n</div>");
   
 });

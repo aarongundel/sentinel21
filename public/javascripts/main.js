@@ -4,7 +4,7 @@ window.App = Ember.Application.create({
 
 App.Router.map(function(){
     this.route("about");
-    //this.route("resume", {path: "/about/resume"});
+    this.route("resume", {path: "/about/resume"});
     this.resource("posts");
     this.resource("post", {path: "/post/:post_id"})
 });
