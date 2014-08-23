@@ -1,0 +1,29 @@
+extends layout
+
+block styles
+    style.
+        .btn:focus{outline:none;}
+        .spacer{height:1em;}
+        .btn-primary, .btn-default{
+            -webkit-transition: padding 0.3s ease, margin 0.3s ease;
+            transition: padding 0.3s ease, margin 0.3s ease;
+        }
+block content
+    div(id='app')
+block scripts
+    script(src="/socket.io/socket.io.js")
+    script(src="javascripts/email.js")
+    div(class="container text-center")
+        h1 Whose turn is it to send an email?
+        div#person 
+            span It's 
+            if nextEmail == "aaron"
+                span#personLabel.aaron Aaron's
+            else
+                span#personalLabel.allyssa Allyssa's
+            span  turn to send a message.
+
+        if nextEmail == "aaron"
+            button(type="button",class="btn btn-primary btn-lg email aaron") Change
+        else
+            button(type="button",class="btn btn-primary btn-lg email allyssa") Change

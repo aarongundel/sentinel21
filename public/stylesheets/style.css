@@ -178,3 +178,9 @@ header .me{
 #resume .header-spacing{
   margin-top:1em;
 }
+
+#person{
+  font-weight:bold;
+  margin-bottom: 18px;
+  font-size: 16px;
+}

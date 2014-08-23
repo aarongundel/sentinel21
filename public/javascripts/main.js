@@ -6,6 +6,7 @@ App.Router.map(function(){
     this.route("about");
     this.route("resume", {path: "/about/resume"});
     this.resource("posts");
+    this.resource("photos");
     this.resource("post", {path: "/post/:post_id"})
 });
 
@@ -30,12 +31,11 @@ App.PostsRoute = Ember.Route.extend({
     model: function(){
         var store = this.get('store');
         return store.find('post');
-        //return Ember.$.getJSON('/api/posts/list');
     },
     setupController: function(controller, posts) {
         controller.set('content', posts);
     }
-});
+}); 
 
 App.LoadingRoute = Ember.Route.extend({
     renderTemplate: function(){

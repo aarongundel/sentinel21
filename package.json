@@ -1,6 +1,6 @@
 {
   "name": "Sentinel21",
-  "version": "0.0.2-3",
+  "version": "0.0.2-12",
   "private": true,
   "scripts": {
     "test": "mocha",
@@ -9,6 +9,8 @@
   "dependencies": {
     "express": "3.3.5",
     "jade": "*",
+    "mongoose": "^3.8.13",
+    "socket.io": "^1.0.6",
     "tumblr": "~0.2.1"
   },
   "devDependencies": {

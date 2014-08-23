@@ -31,6 +31,12 @@ function program5(depth0,data) {
   data.buffer.push("Posts");
   }
 
+function program7(depth0,data) {
+  
+  
+  data.buffer.push("Photos");
+  }
+
   data.buffer.push("\n  <header>\n    <div class=\"column\">\n        <h1>Sentinel<img src=\"/images/logo.png\"></h1>\n        <img class=\"me\" src=\"/images/me.jpg\">\n    </div>\n    <div class=\"bg-nav\">\n        <div class=\"column\">\n            <nav>\n                <ul>\n                    <li>");
   hashTypes = {};
   hashContexts = {};
@@ -48,6 +54,12 @@ function program5(depth0,data) {
   hashContexts = {};
   options = {hash:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
   stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "posts", options) : helperMissing.call(depth0, "link-to", "posts", options));
+  if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
+  data.buffer.push("</li>\n                    <li>");
+  hashTypes = {};
+  hashContexts = {};
+  options = {hash:{},inverse:self.noop,fn:self.program(7, program7, data),contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
+  stack2 = ((stack1 = helpers['link-to'] || depth0['link-to']),stack1 ? stack1.call(depth0, "photos", options) : helperMissing.call(depth0, "link-to", "photos", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("</li>\n                </ul>\n            </nav>\n        </div>\n    </div>\n</header>\n<div class=\"images\">\n    <div class=\"column\">\n        <img class=\"ocean\" src=\"/images/ocean.jpg\">\n        <img class=\"switchback\" src=\"/images/switchback.jpg\">\n        <img class=\"mountain\" src=\"/images/mountain.jpg\">\n        <img class=\"running\" src=\"/images/running.jpg\">\n    </div>\n</div>\n<div class=\"content\">\n    <div class=\"column row\"></div>\n  ");
   hashTypes = {};
@@ -80,6 +92,16 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 
 
   data.buffer.push("<div style=\"margin: 30px auto; width: 1em\">LOADING...</div>");
+  
+});
+
+Ember.TEMPLATES["photos"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  
+
+
+  data.buffer.push("<div id=\"photostream\">\n	<h3>Photostream</h3>\n	<div id=\"map\"></div>\n</div>");
   
 });
 
