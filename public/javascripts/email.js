@@ -29,22 +29,36 @@ $(function(){
       return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
     }
 
+    function ratio(val1, val2) {
+        if(val1 > val2) {
+            return val2/val1;
+        } else {
+            return val1/val2;
+        }
+    }
+
     var red = getRandomInt(0, 255),
         green = getRandomInt(0, 255),
         blue = getRandomInt(0,255);
 
+    var bgLuminosity = Math.pow(red / 255, 2.2)*0.2126 + Math.pow(green / 255, 2.2)*0.7152 + Math.pow(blue / 255, 2.2)*0.07228,
+        whiteLuminosity = 0.2126 + 0.7152 + 0.07228,
+        darkLuminosity = Math.pow(85 / 255, 2.2)*0.2126 + Math.pow(85 / 255, 2.2)*0.7152 + Math.pow(85 / 255, 2.2)*0.07228;
+
+
     var backgroundColor = "#" + pad(red.toString(16), 2) + pad(green.toString(16),2) + pad(blue.toString(16),2);
-    console.log(backgroundColor);
+
     $("body").css({"backgroundColor":backgroundColor});
 
-console.log(red+green+blue)
-    if((red + green + blue) <382){
+
+    if(ratio(bgLuminosity, whiteLuminosity) < ratio(bgLuminosity, darkLuminosity)){
         $("body").css({"color":"#fff"});
-    }
-    else
-    {
+    } else {
         $("body").css({"color": ""});
     }
-
-
 });
+
+/*
+
+(L1+.05) / (L2+.05) where L is luminosity and is defined as .2126*R + .7152*G + .0722B using linearised R, G, and B values. 
+Linearised R (for example) = (R/FS)^2.2 where FS is full scale value (255 for 8 bit color channels). L1 is the higher value (of text or background) and L2 is the lower value.*/
