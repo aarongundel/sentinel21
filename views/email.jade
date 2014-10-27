@@ -10,9 +10,6 @@ block styles
         }
 block content
     div(id='app')
-block scripts
-    script(src="/socket.io/socket.io.js")
-    script(src="javascripts/email.js")
     div(class="container text-center")
         h1 Whose turn is it to send an email?
         div#person 
@@ -27,3 +24,17 @@ block scripts
             button(type="button",class="btn btn-primary btn-lg email aaron") Change
         else
             button(type="button",class="btn btn-primary btn-lg email allyssa") Change
+    div(id="countdown-container")
+        h2 Time until Allyssa's girls come home
+        div(id="countdown")
+
+block scripts
+    script(src="/socket.io/socket.io.js")
+    script(src="javascripts/email.js")
+    script(src="javascripts/countdown.js")
+    script.
+        var november = countdown(new Date(2014, 10, 25),
+                        function(ts) {
+                          document.getElementById('countdown').innerHTML = ts.toHTML("strong");
+                        },
+                        countdown.DAYS|countdown.HOURS|countdown.MINUTES|countdown.SECONDS);

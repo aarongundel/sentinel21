@@ -30,7 +30,6 @@ module.exports = function(io){
         });
         
         io.on('connection', function(socket){
-            console.log('hello');
             socket.on('timerpress', function(data){
                 Email.count(function(err, count){
                     if(count) {

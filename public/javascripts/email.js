@@ -50,6 +50,8 @@ $(function(){
 
     $("body").css({"backgroundColor":backgroundColor});
 
+console.log("light: " + ratio(bgLuminosity, whiteLuminosity));
+console.log("dark: " + ratio(bgLuminosity, darkLuminosity));
 
     if(ratio(bgLuminosity, whiteLuminosity) < ratio(bgLuminosity, darkLuminosity)){
         $("body").css({"color":"#fff"});

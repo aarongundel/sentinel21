@@ -184,3 +184,7 @@ header .me{
   margin-bottom: 18px;
   font-size: 16px;
 }
+
+#countdown-container{
+  text-align:center;
+}
