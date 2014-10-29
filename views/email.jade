@@ -1,6 +1,8 @@
 extends layout
 
 block styles
+
+    link(rel="stylesheet", href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css")
     style.
         .btn:focus{outline:none;}
         .spacer{height:1em;}
@@ -27,14 +29,31 @@ block content
     div(id="countdown-container")
         h2 Time until Allyssa's girls come home
         div(id="countdown")
+    div(id="map-container")
+        h2 Places Aaron and Allyssa have been
+        div(id="map")
 
 block scripts
     script(src="/socket.io/socket.io.js")
     script(src="javascripts/email.js")
     script(src="javascripts/countdown.js")
+    script(src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js")
     script.
         var november = countdown(new Date(2014, 10, 25),
                         function(ts) {
                           document.getElementById('countdown').innerHTML = ts.toHTML("strong");
                         },
                         countdown.DAYS|countdown.HOURS|countdown.MINUTES|countdown.SECONDS);
+    script.
+        var map = new L.map("map").setView([37, -121], 7);
+        var bixbyBridge = new L.marker([36.371389, -121.901944]).bindPopup("Bixby Bridge, Big Sur; October 18, 2014");
+        var morroBay = new L.marker([35.379167, -120.853333]).bindPopup("Morro Bay; October 18, 2014");
+        var castleRock = new L.marker([37.2306, -122.09568]).bindPopup("Castle Rock State Park; August 24, 2014");
+        var goldenGate = new L.marker([37.819722, -122.478611]).bindPopup("Golden Gate Bridge; August 30, 2014");
+        var greatAmerica = new L.marker([37.395944, -121.97225]).bindPopup("Great America; September 13, 2014");
+        var sausalito = new L.marker([37.859167, -122.485278]).bindPopup("Sausalito, CA; August 30, 2014");
+        var lagunaMountain = new L.marker([36.36293, -120.85271]).bindPopup("Laguna Mountain RA; October 24, 2014")
+        var locations = new L.layerGroup([bixbyBridge,morroBay,castleRock,goldenGate,greatAmerica,sausalito,lagunaMountain]).addTo(map);
+
+        var osmLayer = new L.tileLayer('http://{s}.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png');
+        osmLayer.addTo(map);

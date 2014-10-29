@@ -48,15 +48,14 @@ $(function(){
 
     var backgroundColor = "#" + pad(red.toString(16), 2) + pad(green.toString(16),2) + pad(blue.toString(16),2);
 
-    $("body").css({"backgroundColor":backgroundColor});
-
-console.log("light: " + ratio(bgLuminosity, whiteLuminosity));
-console.log("dark: " + ratio(bgLuminosity, darkLuminosity));
+    $("html").css({"backgroundColor":backgroundColor});
 
     if(ratio(bgLuminosity, whiteLuminosity) < ratio(bgLuminosity, darkLuminosity)){
         $("body").css({"color":"#fff"});
+        $("#map").css({"borderColor":"#fff"})
     } else {
         $("body").css({"color": ""});
+        $("#map").css({"borderColor":"#555"})
     }
 });
 

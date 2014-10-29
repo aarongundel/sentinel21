@@ -188,3 +188,15 @@ header .me{
 #countdown-container{
   text-align:center;
 }
+
+#map{
+  width:400px;
+  height:500px;
+  margin:0px auto;
+}
+
+#map-container{
+  overflow:auto;
+  text-align:center;
+  margin:0px auto;
+}
